@@ -715,7 +715,7 @@ export default function HomePage() {
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                   <Brain className="w-16 h-16 text-purple-600" />
                 </div>
-                <CardTitle></CardTitle>
+                <CardTitle>Giovane Cesar da Silva</CardTitle>
                 <CardDescription className="text-purple-600 font-semibold">Chief Technology Officer</CardDescription>
               </CardHeader>
               <CardContent>
