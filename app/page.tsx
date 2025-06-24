@@ -12,7 +12,6 @@ import {
   AlertTriangle,
   CheckCircle,
   MapPin,
-  Phone,
   Mail,
 } from "lucide-react"
 import Link from "next/link"
@@ -47,7 +46,16 @@ export default function HomePage() {
                 Contact
               </Link>
             </div>
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Request Demo</Button>
+            <Link href="#contact">
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">Request Demo</Button>
+            </Link>
+            <div className="md:hidden">
+              <Button variant="ghost" size="sm">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -60,17 +68,23 @@ export default function HomePage() {
               AI-Powered Energy Infrastructure Protection
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Protecting Canada's Energy Future with <span className="text-emerald-600">AI Intelligence</span>
+              AI for Sustainable Energy & <span className="text-emerald-600">Environmental Protection</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               EnergyEminence integrates environmental threat detection with energy infrastructure monitoring, creating a
               unified AI platform that safeguards critical systems while optimizing performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                Schedule Demo <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-gray-900 border-gray-300 hover:bg-gray-50">
+              <Link href="#contact">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white w-full sm:w-auto">
+                  Schedule Demo <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white text-gray-900 border-gray-300 hover:bg-gray-50 w-full sm:w-auto"
+              >
                 Learn More
               </Button>
             </div>
@@ -304,7 +318,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="border-2 border-gray-200 hover:border-emerald-300 transition-colors">
               <CardHeader>
                 <CardTitle className="text-center">Basic</CardTitle>
@@ -454,7 +468,7 @@ export default function HomePage() {
                 <div className="text-gray-600">Jobs Created by Year 3</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">2024</div>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">2025</div>
                 <div className="text-gray-600">Founded</div>
               </div>
             </div>
@@ -475,7 +489,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
                 <div className="space-y-4">
@@ -490,14 +504,7 @@ export default function HomePage() {
                     <Mail className="w-6 h-6 text-emerald-600" />
                     <div>
                       <div className="font-semibold text-gray-900">Email</div>
-                      <div className="text-gray-600">info@kraftgene.ai</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-6 h-6 text-emerald-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">Phone</div>
-                      <div className="text-gray-600">+1 (403) 555-0123</div>
+                      <div className="text-gray-600">info@kraftgeneai.com</div>
                     </div>
                   </div>
                 </div>
@@ -643,7 +650,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 KraftGene AI Inc. All rights reserved.</p>
+            <p>&copy; 2025 KraftGene AI Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
