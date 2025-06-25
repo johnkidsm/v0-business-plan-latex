@@ -222,7 +222,7 @@ export default function HomePage() {
               <CardContent>
                 <p className="text-gray-600 text-sm">
                   AI and ML expert with extensive experience in machine learning and computer vision. Leads technology
-                  strategy and drives innovation in environmental monitoring AI solutions.
+                  strategy and drives innovation in environmental monitoring and energy infrastructure inspection AI solutions.
                 </p>
               </CardContent>
             </Card>
