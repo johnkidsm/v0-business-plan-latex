@@ -49,15 +49,10 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative py-20 h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-full h-full object-cover"
-          src="/videos/hero-background.mp4"
-          typeof="video/mp4"
-        />
+        <video autoPlay loop muted playsInline className="absolute z-0 w-full h-full object-cover">
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-black/50 z-10"></div> {/* Overlay for text readability */}
         <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
