@@ -55,7 +55,7 @@ export default function HomePage() {
           muted
           playsInline
           className="absolute z-0 w-full h-full object-cover"
-          src="/videos/hero-background.mp4"
+          src="/hero-background.mp4"
           typeof="video/mp4"
         />
         <div className="absolute inset-0 bg-black/50 z-10"></div> {/* Overlay for text readability */}
