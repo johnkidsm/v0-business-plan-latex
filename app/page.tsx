@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Shield, Zap, Brain, Satellite, MapPin, Linkedin, Mail } from "lucide-react"
+import { ArrowRight, Shield, Zap, Brain, Satellite, MapPin, Linkedin, Mail, Phone } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -269,6 +269,13 @@ export default function HomePage() {
                     <div>
                       <div className="font-semibold text-gray-900">Email</div>
                       <div className="text-gray-600">info@kraftgeneai.com</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-6 h-6 text-emerald-600" />
+                    <div>
+                      <div className="font-semibold text-gray-900">Phone</div>
+                      <div className="text-gray-600">+1 (587) 323-4687</div>
                     </div>
                   </div>
                   <div>
