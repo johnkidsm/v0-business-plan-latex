@@ -275,7 +275,7 @@ export default function HomePage() {
                     <Phone className="w-6 h-6 text-emerald-600" />
                     <div>
                       <div className="font-semibold text-gray-900">Phone</div>
-                      <div className="text-gray-600">+1 (587) 323-4687</div>
+                      <div className="text-gray-600">+1 (587) 323-4687 from 9 am to 5 pm MT </div>
                     </div>
                   </div>
                   <div>
