@@ -200,7 +200,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/images/yu-nong.jpg"
+                    src="/images/CEO.jpg"
                     alt="Yu Nong, Founder & CEO"
                     width={128}
                     height={128}
@@ -223,7 +223,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                   <Image
-                    src="/images/giovane-cesar.jpg"
+                    src="/images/CTO.jpg"
                     alt="Giovane Cesar, Founder & CTO"
                     width={128}
                     height={128}
