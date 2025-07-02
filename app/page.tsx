@@ -221,7 +221,7 @@ export default function HomePage() {
             {/* CTO */}
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
                     src="/images/CTO.JPG"
                     alt="Giovane Cesar, Founder & CTO"
