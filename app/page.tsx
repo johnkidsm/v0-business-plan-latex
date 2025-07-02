@@ -208,7 +208,7 @@ export default function HomePage() {
                   />
                 </div>
                 <CardTitle>Yu Nong</CardTitle>
-                <CardDescription className="text-emerald-600 font-semibold">CoFounder & CEO</CardDescription>
+                <CardDescription className="text-emerald-600 font-semibold">Co-Founder & CEO</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm">
@@ -232,7 +232,7 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Giovane Cesar da Silva</CardTitle>
                 <CardDescription className="text-purple-600 font-semibold">
-                  CoFounder & Chief Technology Officer
+                  Co-Founder & Chief Technology Officer
                 </CardDescription>
               </CardHeader>
               <CardContent>
