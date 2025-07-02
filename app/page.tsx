@@ -200,7 +200,7 @@ export default function HomePage() {
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/images/yu-nong-ceo.jpg"
+                    src="/images/yu-nong.jpg"
                     alt="Yu Nong, Founder & CEO"
                     width={128}
                     height={128}
@@ -213,7 +213,7 @@ export default function HomePage() {
               <CardContent>
                 <p className="text-gray-600 text-sm">
                   Visionary entrepreneur leading KraftGene AI's mission to revolutionize energy infrastructure
-                  protection through artificial intelligence and environmental monitoring solutions.
+                  protection and environmental threat detection through artificial intelligence and robotics.
                 </p>
               </CardContent>
             </Card>
@@ -222,7 +222,13 @@ export default function HomePage() {
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                  <Brain className="w-16 h-16 text-purple-600" />
+                  <Image
+                    src="/images/giovane-cesar.jpg"
+                    alt="Giovane Cesar, Founder & CTO"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardTitle>Giovane Cesar da Silva</CardTitle>
                 <CardDescription className="text-purple-600 font-semibold">
