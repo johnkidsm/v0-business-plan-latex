@@ -231,7 +231,7 @@ export default function HomePage() {
                   />
                 </div>
                 <CardTitle>Giovane Cesar da Silva</CardTitle>
-                <CardDescription className="text-purple-600 font-semibold">
+                <CardDescription className="text-emerald-600 font-semibold">
                   Co-Founder & Chief Technology Officer
                 </CardDescription>
               </CardHeader>
@@ -257,7 +257,7 @@ export default function HomePage() {
                   />
                 </div>
                 <CardTitle>Daniel Lima Vilela</CardTitle>
-                <CardDescription className="text-purple-600 font-semibold">
+                <CardDescription className="text-emerald-600 font-semibold">
                   Co-Founder & Chief Operating Officer
                 </CardDescription>
               </CardHeader>
