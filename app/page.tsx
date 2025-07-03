@@ -243,6 +243,31 @@ export default function HomePage() {
                 </p>
               </CardContent>
             </Card>
+            
+             {/* COO */}
+            <Card className="text-center border-0 shadow-lg">
+              <CardHeader>
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="/images/COO.JPG"
+                    alt="Daniel Vilela, Founder & CTO"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle>Daniel Lima Vilela</CardTitle>
+                <CardDescription className="text-purple-600 font-semibold">
+                  Co-Founder & Chief Operating Officer
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-sm">
+                  Highly accomplished MBA/Engineer with 16 years in senior sales leadership (P&L) within Energy & Oil & Gas, 
+                  recognized for driving revenue and expanding market share.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
