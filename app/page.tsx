@@ -23,7 +23,7 @@ export default function HomePage() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-gray-900">KraftGene AI</span>
+              <span className="text-xl font-bold text-gray-900">Kraftgene AI</span>
             </div>
 
             <div className="flex items-center space-x-2">
@@ -67,7 +67,7 @@ export default function HomePage() {
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
               KraftGene AI is developing innovative artificial intelligence solutions to integrate environmental threat
-              detection with energy infrastructure monitoring for Canada's sustainable energy future.
+              detection with energy infrastructure monitoring and robotics for Canada's sustainable energy future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact">
@@ -87,8 +87,9 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
             <p className="text-xl text-gray-600 mb-12">
               We envision a future where artificial intelligence seamlessly protects Canada's energy infrastructure
-              while safeguarding our environment. Our goal is to develop comprehensive AI solutions that can predict,
-              monitor, and respond to environmental threats before they impact critical energy systems.
+              while safeguarding our environment. Our goal is to develop comprehensive AI solutions that can seamlessly
+              integrate environmental intelligence, energy infrastructure monitoring and robotic real-time data collection
+              with drones and ground robots to safeguard Canada's critical energy systems.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
@@ -142,9 +143,9 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About KraftGene AI</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Kraftgene AI</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Founded in Toronto, Ontario, KraftGene AI is an early-stage startup focused on developing artificial
+                  Founded in Toronto, Ontario, Kraftgene AI is an early-stage startup focused on developing artificial
                   intelligence solutions for the energy sector. We are working to create innovative technologies that
                   will help protect Canada's energy infrastructure while supporting environmental sustainability.
                 </p>
@@ -347,7 +348,7 @@ export default function HomePage() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold">KraftGene AI</span>
+              <span className="text-xl font-bold">Kraftgene AI</span>
             </div>
             <div className="flex items-center space-x-2">
               <Link href="https://www.linkedin.com/company/kraftgene-ai" target="_blank" rel="noopener noreferrer">
@@ -365,7 +366,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 KraftGene AI Inc. All rights reserved.</p>
+            <p>&copy; 2025 Kraftgene AI Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
