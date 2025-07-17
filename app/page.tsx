@@ -144,7 +144,7 @@ export default function HomePage() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About KraftGene AI</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Founded in Calgary, Alberta, KraftGene AI is an early-stage startup focused on developing artificial
+                  Founded in Toronto, Ontario, KraftGene AI is an early-stage startup focused on developing artificial
                   intelligence solutions for the energy sector. We are working to create innovative technologies that
                   will help protect Canada's energy infrastructure while supporting environmental sustainability.
                 </p>
@@ -155,7 +155,7 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                    <span className="text-gray-700">Based in Calgary, Alberta</span>
+                    <span className="text-gray-700">Based in Toronto, Ontario</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
@@ -292,7 +292,7 @@ export default function HomePage() {
                     <MapPin className="w-6 h-6 text-emerald-600" />
                     <div>
                       <div className="font-semibold text-gray-900">Location</div>
-                      <div className="text-gray-600">Calgary, Alberta, Canada</div>
+                      <div className="text-gray-600">Toronto, Ontario, Canada</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
