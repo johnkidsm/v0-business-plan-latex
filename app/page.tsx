@@ -245,7 +245,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
             
-             {/* COO */}
+             {/* COO 
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -268,7 +268,7 @@ export default function HomePage() {
                   recognized for driving revenue and expanding market share.
                 </p>
               </CardContent>
-            </Card>
+            </Card>*/}
           </div>
         </div>
       </section>
