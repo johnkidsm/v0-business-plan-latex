@@ -219,7 +219,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            {/* CTO */}
+            {/* CTO 
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -243,7 +243,7 @@ export default function HomePage() {
                   solutions.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
             
              
             <Card className="text-center border-0 shadow-lg">
