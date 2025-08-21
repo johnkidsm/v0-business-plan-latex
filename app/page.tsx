@@ -86,10 +86,9 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
             <p className="text-xl text-gray-600 mb-12">
-              We envision a future where artificial intelligence seamlessly protects Canada's energy infrastructure
-              while safeguarding our environment. Our goal is to develop comprehensive AI solutions that can seamlessly
-              integrate environmental intelligence, energy infrastructure monitoring and robotic real-time data collection
-              with drones and ground robots to safeguard Canada's critical energy systems.
+             We envision a future where artificial intelligence seamlessly protects Canada's energy infrastructure while safeguarding the environment. Our goal is to develop comprehensive AI solutions that integrate environmental intelligence, energy infrastructure monitoring, and real-time data from robotics like drones and ground robots to protect Canada's critical energy systems.
+              
+We also envision a future where we extend our platform with an AI Agent System that introduces autonomous decision-making. This multi-agent architecture will enable automated grid stabilization, threat response, and emissions optimization to reduce system response times from minutes to seconds.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
@@ -119,7 +118,7 @@ export default function HomePage() {
                     <Brain className="w-6 h-6 text-purple-600" />
                   </div>
                   <CardTitle className="text-lg">AI Innovation</CardTitle>
-                  <CardDescription>Advanced machine learning, predictive analytics and agentic system for autonomous decision-making</CardDescription>
+                  <CardDescription>Advanced machine learning, predictive analytics and agentic system</CardDescription>
                 </CardHeader>
               </Card>
 
