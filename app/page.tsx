@@ -119,7 +119,7 @@ export default function HomePage() {
                     <Brain className="w-6 h-6 text-purple-600" />
                   </div>
                   <CardTitle className="text-lg">AI Innovation</CardTitle>
-                  <CardDescription>Advanced machine learning and predictive analytics</CardDescription>
+                  <CardDescription>Advanced machine learning, predictive analytics and agentic system for autonomous decision-making</CardDescription>
                 </CardHeader>
               </Card>
 
