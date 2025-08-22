@@ -184,7 +184,7 @@ We also envision a future where we extend our platform with an AI Agent System t
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* Leadership Section 
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -195,7 +195,7 @@ We also envision a future where we extend our platform with an AI Agent System t
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* CEO */}
+
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -217,8 +217,7 @@ We also envision a future where we extend our platform with an AI Agent System t
                 </p>
               </CardContent>
             </Card>
-
-            {/* CTO 
+ 
             <Card className="text-center border-0 shadow-lg">
               <CardHeader>
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -242,7 +241,7 @@ We also envision a future where we extend our platform with an AI Agent System t
                   solutions.
                 </p>
               </CardContent>
-            </Card> */}
+            </Card> 
             
              
             <Card className="text-center border-0 shadow-lg">
@@ -270,7 +269,7 @@ We also envision a future where we extend our platform with an AI Agent System t
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
