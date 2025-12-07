@@ -1,4 +1,4 @@
-# Business plan
+# Business 
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
