@@ -27,12 +27,12 @@ export default function HomePage() {
   const jumpToSlide = (index: number) => {
     setCurrentSlideIdx(index);
     if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(nextSlide, 5000);
+    timerRef.current = setInterval(nextSlide, 10000);
   };
 
   // 3. EFFECTS
   useEffect(() => {
-    timerRef.current = setInterval(nextSlide, 5000);
+    timerRef.current = setInterval(nextSlide, 10000);
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
