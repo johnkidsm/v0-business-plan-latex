@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle } from "lucide-react"
+import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle, Linkedin } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -94,7 +94,6 @@ export default function HomePage() {
 
             <div className="flex items-center space-x-2">
                <Link href="#about">
-                 {/* Request 2: Fixed hover state to prevent solid white blocking text */}
                  <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10 mr-2">About</Button>
                </Link>
 
@@ -302,7 +301,6 @@ export default function HomePage() {
             </div>
 
             {/* Research Item 2: Wildfire Detection (Edge AI) */}
-            {/* Request 1: Changed from grid to flex-col to stack Video (Top) and Text (Bottom) */}
             <div className="flex flex-col gap-8">
               <div className="w-full">
                 <div className="flex items-center space-x-3 mb-4">
@@ -327,6 +325,14 @@ export default function HomePage() {
                     <div className="text-xs text-gray-500">Model Size</div>
                   </div>
                 </div>
+                {/* NEW: LinkedIn Button (Red Theme - High Contrast Hover) */}
+                <div className="flex gap-4">
+                  <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7391079734203400192" target="_blank">
+                    <Button variant="outline" className="border-red-500 text-red-400 hover:bg-red-600 hover:text-white transition-colors">
+                      <Linkedin className="w-4 h-4 mr-2"/> View on LinkedIn
+                    </Button>
+                  </Link>
+                </div>
               </div>
               <div className="w-full relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-red-900/20 bg-gray-900">
                 {/* Embedded Video - Ensure video exists */}
@@ -337,7 +343,6 @@ export default function HomePage() {
                 />
                  
               </div>
-              
             </div>
 
             {/* Research Item 3: Flood Detection (Eye in the Sky) */}
@@ -353,6 +358,14 @@ export default function HomePage() {
                 <p className="text-gray-400 mb-6">
                   These visual insights serve as dynamic inputs for our failure analysis, predicting how the grid will react to rising waters minutes before a substation is submerged.
                 </p>
+                {/* NEW: LinkedIn Button (Blue Theme - High Contrast Hover) */}
+                <div className="flex gap-4 mt-6">
+                  <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7403183040929398785" target="_blank">
+                    <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white transition-colors">
+                      <Linkedin className="w-4 h-4 mr-2"/> View on LinkedIn
+                    </Button>
+                  </Link>
+                </div>
               </div>
               <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/20">
                  {/* Ensure image exists */}
@@ -384,11 +397,19 @@ export default function HomePage() {
                 <p className="text-gray-400 mb-6 leading-relaxed">
                    A single landslide can sever a critical power corridor. Our framework fuses satellite imagery with real-time SCADA telemetry to pinpoint landslide risks with high true-positive rates and minimal false positives (7.8%).
                 </p>
-                <div className="p-6 bg-emerald-900/20 border border-emerald-500/20 rounded-xl">
+                <div className="p-6 bg-emerald-900/20 border border-emerald-500/20 rounded-xl mb-6">
                   <h4 className="text-emerald-400 font-semibold mb-2">Impact</h4>
                   <p className="text-gray-300 text-sm">
                     Enables operators to de-energize lines or reroute power 15-35 minutes before physical impact, preventing cascading blackouts and wildfires.
                   </p>
+                </div>
+                {/* NEW: LinkedIn Button (Yellow Theme - High Contrast Hover) */}
+                <div className="flex gap-4">
+                  <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7392044029498195969" target="_blank">
+                    <Button variant="outline" className="border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-colors">
+                      <Linkedin className="w-4 h-4 mr-2"/> View on LinkedIn
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
