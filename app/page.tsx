@@ -293,7 +293,7 @@ export default function HomePage() {
               <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-emerald-900/20">
                  {/* Ensure image exists */}
                 <Image 
-                  src="/images/cascade_detec.jpg" 
+                  src="/images/cascade_detec.JPG" 
                   alt="Cascade Failure Graph" 
                   width={800} height={600} 
                   className="w-full h-auto"
