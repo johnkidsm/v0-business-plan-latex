@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle, Linkedin } from "lucide-react"
+import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle, Linkedin, Download, FileCode, Cpu, Network } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -54,17 +54,17 @@ export default function HomePage() {
     <>
       <Link href="https://www.linkedin.com/company/kraftgeneai" target="_blank">
         <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10 h-12 w-12">
-          <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </Button>
       </Link>
       <Link href="https://github.com/KraftgeneAI/" target="_blank">
         <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10 h-12 w-12">
-          <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
         </Button>
       </Link>
       <Link href="https://discord.gg/xcW6GUsPdH" target="_blank">
         <Button variant="ghost" size="icon" className="text-gray-300 hover:text-white hover:bg-white/10 h-12 w-12">
-           <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+           <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
              <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.6853-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/>
            </svg>
         </Button>
@@ -79,17 +79,20 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 relative rounded overflow-hidden">
-                 {/* Ensure this image exists */}
-                <Image
-                  src="/images/kraftgene-logo.jpg"
-                  alt="Kraftgene AI"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-xl font-bold text-white">Kraftgene AI Inc.</span>
+              {/* Request 1: Wrapped Logo and Text in a Link to #about */}
+              <Link href="#about" className="flex items-center space-x-2 group">
+                <div className="w-10 h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
+                   {/* Ensure this image exists */}
+                  <Image
+                    src="/images/kraftgene-logo.jpg"
+                    alt="Kraftgene AI"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">Kraftgene AI Inc.</span>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-2">
@@ -249,6 +252,110 @@ export default function HomePage() {
                   <h4 className="text-xl font-bold text-white mb-4">Sustainable Future</h4>
                   <p className="text-gray-400">Supporting Canada's clean energy transition</p>
               </div>
+          </div>
+        </div>
+      </section>
+
+      {/* System Architecture & Future Vision Section */}
+      <section className="relative py-32 bg-black border-t border-white/10 overflow-hidden">
+        {/* Background Ambient Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-emerald-900/20 rounded-full blur-[120px] pointer-events-none" />
+        
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <Badge variant="outline" className="mb-4 border-white/20 text-gray-400 uppercase tracking-wider text-xs">Technical Documentation</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">System Architecture & Roadmap</h2>
+            <p className="text-xl text-gray-400">
+              Deep dive into our engineering standards. From our foundational data acquisition platform to our roadmap for autonomous agentic systems.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            {/* Card 1: Foundation Platform */}
+            <div className="group relative bg-gray-900/40 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden hover:border-emerald-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.3)]">
+              {/* Top Gradient Line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="p-8 sm:p-10">
+                <div className="flex items-start justify-between mb-8">
+                  <div className="w-14 h-14 bg-emerald-950/50 rounded-2xl border border-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Network className="w-7 h-7 text-emerald-500" />
+                  </div>
+                  <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 px-3 py-1">Current Platform</Badge>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">EnergyEminence Foundation</h3>
+                <p className="text-gray-400 mb-8 leading-relaxed h-20">
+                  The core system design for high-frequency data acquisition, multi-modal environmental analytics, and robotic fleet integration.
+                </p>
+
+                {/* Specs List */}
+                <div className="space-y-3 mb-10 border-t border-white/5 pt-6">
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">System Specifications</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-emerald-500 mr-3" /> Real-time Telemetry Fusion
+                    </li>
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-emerald-500 mr-3" /> Predictive Analytics Engine
+                    </li>
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-emerald-500 mr-3" /> Robotic Control Interface
+                    </li>
+                  </ul>
+                </div>
+
+                <Link href="/EnergyEminence AI Platform System Design and Architecture.pdf" target="_blank" download>
+                  <Button className="w-full bg-white text-black hover:bg-emerald-400 hover:text-black hover:border-emerald-400 transition-all duration-300 font-semibold h-12">
+                    <Download className="w-4 h-4 mr-2" /> Download System Architecture
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2: Agentic System Extension */}
+            <div className="group relative bg-gray-900/40 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(168,85,247,0.3)]">
+              {/* Top Gradient Line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="p-8 sm:p-10">
+                <div className="flex items-start justify-between mb-8">
+                  <div className="w-14 h-14 bg-purple-950/50 rounded-2xl border border-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Cpu className="w-7 h-7 text-purple-500" />
+                  </div>
+                  <Badge className="bg-purple-500/10 text-purple-400 border-purple-500/20 px-3 py-1">Future Vision</Badge>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">AI Agentic System Extension</h3>
+                <p className="text-gray-400 mb-8 leading-relaxed h-20">
+                  Our roadmap for transitioning from predictive monitoring to autonomous decision-making agents for grid self-healing.
+                </p>
+
+                {/* Specs List */}
+                <div className="space-y-3 mb-10 border-t border-white/5 pt-6">
+                  <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Capabilities Roadmap</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <Brain className="w-4 h-4 text-purple-500 mr-3" /> Autonomous Grid Stabilization
+                    </li>
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <Brain className="w-4 h-4 text-purple-500 mr-3" /> Multi-Agent Response Swarms
+                    </li>
+                    <li className="flex items-center text-gray-300 text-sm">
+                      <Brain className="w-4 h-4 text-purple-500 mr-3" /> Automated Emissions Optimization
+                    </li>
+                  </ul>
+                </div>
+
+                <Link href="/EnergyEminence_Platform__AI_Agent_System_Extension.pdf" target="_blank" download>
+                  <Button className="w-full bg-white/5 text-white border border-white/20 hover:bg-purple-500/20 hover:text-purple-300 hover:border-purple-500/50 transition-all duration-300 font-semibold h-12">
+                    <Download className="w-4 h-4 mr-2" /> Download Vision Paper
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
