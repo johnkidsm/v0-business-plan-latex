@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle, Linkedin, Download, FileCode, Cpu, Network } from "lucide-react"
+// Added 'Map' to imports for the new button icon
+import { ArrowRight, MapPin, Mail, FileText, Activity, Zap, ShieldCheck, Brain, Leaf, CheckCircle, Linkedin, Download, FileCode, Cpu, Network, Map } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -44,10 +45,24 @@ export default function HomePage() {
       activeVideo.currentTime = 0; 
       // Use a slight delay to ensure element is ready, though often not strictly necessary with React refs
       setTimeout(() => {
+          // Added catch to prevent errors if video isn't loaded yet
           activeVideo.play().catch(e => console.log("Autoplay prevented:", e));
       }, 50);
     }
   }, [currentSlideIdx]);
+
+  // PERFORMANCE FIX & SMOOTHNESS TWEAK: 
+  // We load: 
+  // 1. Current video (Visible)
+  // 2. Next video (Buffering for smooth entry)
+  // 3. Previous video (Fading out - ESSENTIAL for smooth transition, otherwise it cuts to black instantly)
+  const shouldLoadVideo = (index: number) => {
+    const total = videoSlides.length;
+    const nextIdx = (currentSlideIdx + 1) % total;
+    const prevIdx = (currentSlideIdx - 1 + total) % total; // Handle wrap-around for previous
+    
+    return index === currentSlideIdx || index === nextIdx || index === prevIdx;
+  };
 
   // Shared Social Buttons Component
   const SocialButtons = () => (
@@ -79,7 +94,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
-              {/* Request 1: Wrapped Logo and Text in a Link to #about */}
               <Link href="#about" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
                    {/* Ensure this image exists */}
@@ -104,6 +118,12 @@ export default function HomePage() {
               <Link href="#contact">
                 <Button className="bg-emerald-600 hover:bg-emerald-700 text-white ml-2 border-0">Get in Touch</Button>
               </Link>
+              {/* NEW ROADMAP BUTTON - IMPROVED CONTRAST */}
+              <Link href="#roadmap">
+                <Button variant="outline" className="text-emerald-400 border-emerald-500/50 hover:bg-emerald-400 hover:text-black transition-colors ml-2">
+                   <Map className="w-4 h-4 mr-2"/> Roadmap
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -119,13 +139,16 @@ export default function HomePage() {
               index === currentSlideIdx ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
+            {/* MEMORY OPTIMIZATION with PREV BUFFER: 
+                Conditionally set SRC only for Prev, Current, and Next.
+                This allows the 'fading out' video to stay loaded, preventing the "black jump" jerkiness. */}
             <video
               ref={(el) => { videoRefs.current[index] = el }}
               muted
               loop
               playsInline
               className="w-full h-full object-cover opacity-60"
-              src={src}
+              src={shouldLoadVideo(index) ? src : undefined}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30"></div>
           </div>
@@ -257,7 +280,8 @@ export default function HomePage() {
       </section>
 
       {/* System Architecture & Future Vision Section */}
-      <section className="relative py-32 bg-black border-t border-white/10 overflow-hidden">
+      {/* Added ID to allow scrolling from the new button */}
+      <section id="roadmap" className="relative py-32 bg-black border-t border-white/10 overflow-hidden">
         {/* Background Ambient Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-emerald-900/20 rounded-full blur-[120px] pointer-events-none" />
         
@@ -446,7 +470,7 @@ export default function HomePage() {
                 <video 
                   autoPlay loop muted playsInline 
                   className="w-full h-auto"
-                  src="/video.mp4" 
+                  src="/wildfiredetec_sidebyside.mp4" 
                 />
                  
               </div>
