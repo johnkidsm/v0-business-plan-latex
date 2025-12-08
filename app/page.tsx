@@ -120,7 +120,7 @@ export default function HomePage() {
                  {/* FIX: Added 'h-16', 'text-lg', and 'px-6' to match the large social icons */}
                  <Button 
                    variant="ghost" 
-                   className="text-gray-300 hover:text-white hover:bg-white/10 mr-2 h-16 text-lg px-6"
+                   className="text-gray-300 hover:text-white hover:bg-white/10 mr-2 h-16 text-xl px-6"
                  >
                    About
                  </Button>
