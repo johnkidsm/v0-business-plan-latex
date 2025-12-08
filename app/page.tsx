@@ -306,7 +306,7 @@ export default function HomePage() {
                   </ul>
                 </div>
 
-                <Link href="/EnergyEminence AI Platform System Design and Architecture.pdf" target="_blank" download>
+                <Link href="/system__design.pdf" target="_blank" download>
                   <Button className="w-full bg-white text-black hover:bg-emerald-400 hover:text-black hover:border-emerald-400 transition-all duration-300 font-semibold h-12">
                     <Download className="w-4 h-4 mr-2" /> Download System Architecture
                   </Button>
@@ -348,7 +348,7 @@ export default function HomePage() {
                   </ul>
                 </div>
 
-                <Link href="/EnergyEminence_Platform__AI_Agent_System_Extension.pdf" target="_blank" download>
+                <Link href="/extension.pdf" target="_blank" download>
                   <Button className="w-full bg-white/5 text-white border border-white/20 hover:bg-purple-500/20 hover:text-purple-300 hover:border-purple-500/50 transition-all duration-300 font-semibold h-12">
                     <Download className="w-4 h-4 mr-2" /> Download Vision Paper
                   </Button>
