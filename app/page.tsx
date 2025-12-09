@@ -73,21 +73,21 @@ export default function HomePage() {
       {/* LinkedIn */}
       <Link href="https://www.linkedin.com/company/kraftgeneai" target="_blank">
         <div className="flex items-center justify-center w-16 h-16 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
-          <FaLinkedin size={30} />
+          <FaLinkedin size={25} />
         </div>
       </Link>
 
       {/* GitHub */}
       <Link href="https://github.com/KraftgeneAI/" target="_blank">
         <div className="flex items-center justify-center w-16 h-16 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
-          <FaGithub size={30} />
+          <FaGithub size={25} />
         </div>
       </Link>
 
       {/* Discord */}
       <Link href="https://discord.gg/xcW6GUsPdH" target="_blank">
         <div className="flex items-center justify-center w-16 h-16 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer">
-          <FaDiscord size={30} />
+          <FaDiscord size={25} />
         </div>
       </Link>
     </>
