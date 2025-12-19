@@ -576,7 +576,57 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
               </div>
             </div>
+{/* Research Item 5: Mini-MVP */}
+             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+               
+              {/* ITEM 5 FIGURE & CAPTION */}
+              <div className="rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4">
+                <Image 
+                  src="/images/screenshot1.JPG" 
+                  alt="Mini-MVP Dashboard" 
+                  width={800} height={600} 
+                  className="w-full h-auto rounded-xl"
+                />
+                 <p className="text-gray-400 text-sm mt-3 text-center leading-relaxed px-2">
+                    Figure 5: Interactive Mini-MVP showing Engineer Mode diagnostics and cascade path prediction.
+                  </p>
 
+              </div>
+
+               <div className="order-2 lg:order-2">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Badge variant="outline" className="border-emerald-500 text-emerald-400">Interactive MVP</Badge>
+                  <span className="text-gray-500 text-sm">Live Demo</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Interactive Mini-MVP: Physics-Informed Cascade Detection</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                   A streamlined, interactive demonstration of our core AI engine designed for technical validation. This Mini-MVP allows engineering teams to explore failure scenarios using synthetic data, showcasing our "Zero-Miss" architecture.
+                </p>
+                
+                {/* Impact Box */}
+                <div className="p-6 bg-emerald-900/20 border border-emerald-500/20 rounded-xl mb-6">
+                  <h4 className="text-emerald-400 font-semibold mb-2">Capabilities</h4>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Tuned for "Zero-Miss" sensitivity (100% event recall).</li>
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Interactive "Engineer Mode" for deep signal diagnostics.</li>
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Adheres to physics-based power flow constraints.</li>
+                  </ul>
+                </div>
+
+                <div className="flex gap-4">
+                  <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7407573580798083072" target="_blank" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-colors">
+                      <FaLinkedin className="w-4 h-4 mr-2"/> View on LinkedIn
+                    </Button>
+                  </Link>
+                  <Link href="https://github.com/KraftgeneAI/Mini-MVP" target="_blank" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto border-gray-500 text-gray-400 hover:bg-white hover:text-black transition-colors">
+                      <FaGithub className="w-4 h-4 mr-2"/> View Code
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
