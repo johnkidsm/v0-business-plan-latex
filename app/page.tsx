@@ -630,7 +630,41 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
           </div>
         </div>
       </section>
+{/* Strategic Partners Section */}
+      <section className="py-16 bg-black border-t border-white/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Strategic Partners & Ecosystem</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Accelerating our technology with the support of industry leaders and innovation hubs.
+            </p>
+          </div>
 
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+            {[
+              { src: "/images/partner1.JPG", alt: "Hydro Québec" },
+              { src: "/images/partner4.JPG", alt: "Alberta Innovates" },
+              { src: "/images/partner5.JPG", alt: "Canadian Natural" },
+              { src: "/images/partner2.JPG", alt: "Altitude Accelerator" },
+              { src: "/images/partner3.png", alt: "AWS" },
+            ].map((partner, index) => (
+              <div 
+                key={index} 
+                className="group bg-white rounded-xl p-4 w-40 h-24 md:w-52 md:h-28 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    fill
+                    className="object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Platform / Contact CTA */}
       <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-black to-gray-900 border-t border-white/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
