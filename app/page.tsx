@@ -24,7 +24,25 @@ export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // New State for Mobile Menu
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+// Add this definition above your component or inside the file
+type SelectedImage = {
+  src: string;
+  alt: string;
+  type?: 'image' | 'video'; // Include this if you kept the video logic, otherwise optional
+};
 
+// Update the hook inside your component
+const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null);
+
+// 2. Define image data array for cleaner rendering and easier click handling
+const researchImages = [
+  { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
+  { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
+  { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
+  { src: "/images/f4.JPG", alt: "Figure 1(d): Sample Grid Graph Representation" },
+  { src: "/images/f5.JPG", alt: "Figure 1(e): Risk Assessment Framework" },
+  { src: "/images/f6.JPG", alt: "Figure 1(f): End-to-End System Data Flow" },
+];
   const nextSlide = () => {
     setCurrentSlideIdx((prevIdx) => (prevIdx === videoSlides.length - 1 ? 0 : prevIdx + 1));
   };
@@ -52,6 +70,27 @@ export default function HomePage() {
       }, 50);
     }
   }, [currentSlideIdx]);
+
+// Handle ESC key press to close modal
+  useEffect(() => {
+    // Add ': KeyboardEvent' after the event parameter
+const handleKeyDown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    setSelectedImage(null);
+  }
+};
+
+
+    
+    if (selectedImage) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    // Cleanup listener when modal closes or component unmounts
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage]);
 
   const shouldLoadVideo = (index: number) => {
     const total = videoSlides.length;
@@ -399,46 +438,103 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
 
           <div className="space-y-16 md:space-y-24">
             
-            {/* Research Item 1: Cascade Failure */}
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Badge variant="outline" className="border-emerald-500 text-emerald-400">Breakthrough Research</Badge>
-                  <span className="text-gray-500 text-sm">Nov 2025</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Predictive Cascade Failure Analysis</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
-                  We have developed a sophisticated model built on Graph Neural Networks (GNNs) and a Physics-Informed Learning (PIL) framework. By processing the grid as a graph and fusing multi-modal data, we can forecast catastrophic cascade failures 15-35 minutes before they occur.
+{/* Research Item 1: Cascade Failure Main Content */}
+    <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start relative z-10">
+      {/* TEXT CONTENT (Left Column on Desktop, Bottom on Mobile) */}
+      <div className="order-2 lg:order-1">
+        <div className="flex items-center space-x-3 mb-4">
+          <Badge variant="outline" className="border-emerald-500 text-emerald-400">Breakthrough Research</Badge>
+          <span className="text-gray-500 text-sm">Nov 2025</span>
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Predictive Cascade Failure Analysis</h3>
+        <p className="text-gray-400 mb-6 leading-relaxed">
+          We have developed a sophisticated model built on Graph Neural Networks (GNNs) and a Physics-Informed Learning (PIL) framework. By processing the grid as a graph and fusing multi-modal data, we can forecast catastrophic cascade failures 15-35 minutes before they occur.
+        </p>
+        <ul className="space-y-3 mb-8 text-gray-300 text-sm md:text-base">
+          <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> 78.4% detection rate</li>
+          <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Fuses telemetry, satellite, and robotic sensors</li>
+          <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Physically plausible predictions via PIL</li>
+        </ul>
+        <div className="flex gap-4">
+          <Link href="https://www.techrxiv.org/users/880618/articles/1357639-ai-driven-predictive-cascade-failure-analysis-using-multi-modal-environmental-infrastructure-data-fusion-a-real-time-prediction-framework-for-critical-energy-infrastructure" target="_blank">
+            <Button variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-950 hover:text-emerald-400 transition-colors w-full sm:w-auto">
+              <FileText className="w-4 h-4 mr-2" /> Read Paper
+            </Button>
+          </Link>
+        </div>
+      </div>
 
-
-                </p>
-                <ul className="space-y-3 mb-8 text-gray-300 text-sm md:text-base">
-                  <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> 78.4% detection rate</li>
-                  <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Fuses telemetry, satellite, and robotic sensors</li>
-                  <li className="flex items-center"><Activity className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Physically plausible predictions via PIL</li>
-                </ul>
-                <div className="flex gap-4">
-                  <Link href="https://www.techrxiv.org/users/880618/articles/1357639-ai-driven-predictive-cascade-failure-analysis-using-multi-modal-environmental-infrastructure-data-fusion-a-real-time-prediction-framework-for-critical-energy-infrastructure" target="_blank">
-                    <Button variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-950 hover:text-emerald-400 transition-colors w-full sm:w-auto">
-                      <FileText className="w-4 h-4 mr-2"/> Read Paper
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              
-              {/* ITEM 1 FIGURE & CAPTION */}
-              <div className="order-1 lg:order-2 rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4">
-                <Image 
-                  src="/images/cascade_detec.JPG" 
-                  alt="Cascade Failure Graph" 
-                  width={800} height={600} 
-                  className="w-full h-auto rounded-xl"
-                />
-                <p className="text-gray-400 text-sm mt-4 text-center leading-relaxed">
-                  Figure 1: System architecture for multi-modal predictive cascade failure analysis.
-                </p>
-              </div>
+      {/* 6-IMAGE GRID (Right Column on Desktop, Top on Mobile) */}
+      <div className="order-1 lg:order-2 rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-3 md:p-4">
+        {/* Grid container for 6 images */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+          
+          {/* Mapping through the images array */}
+          {researchImages.map((img, index) => (
+            <div 
+              key={index}
+              // Added 'cursor-pointer' for requirement #1
+              // Added onClick handler for requirement #2
+              className="relative rounded-lg overflow-hidden border border-white/5 hover:border-emerald-500/30 transition-colors group cursor-pointer"
+              onClick={() => setSelectedImage(img)}
+             >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={400} height={250}
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
+          ))}
+
+        </div>
+        {/* Combined Caption */}
+        <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center leading-relaxed px-2">
+          <strong>Figures 1(a)-(f):</strong> Complete system overview covering high-level architecture, data source integration, grid graph representation, tensor-based fusion processing, risk assessment framework, and end-to-end data flow pipeline. Click images to enlarge.
+        </p>
+      </div>
+    </div>
+
+
+    {/* --- IMAGE MODAL / LIGHTBOX --- */}
+    {/* Requirement #2: Pop up right size to read clearly */}
+    {selectedImage && (
+      <div 
+        // Fixed overlay covering the screen with dark background
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-8"
+        // Close modal when clicking the background
+        onClick={() => setSelectedImage(null)}
+      >
+        {/* Close Button */}
+        <button 
+          className="absolute top-4 right-4 text-gray-400 hover:text-white hover:bg-white/10 rounded-full p-2 transition-colors z-[101]"
+          onClick={() => setSelectedImage(null)}
+        >
+          <X className="w-8 h-8" />
+        </button>
+
+        {/* Image Container within Modal */}
+        <div 
+          className="relative w-full h-full max-w-7xl max-h-[90vh] flex flex-col items-center justify-center"
+          // Stop clicks on the image itself from closing the modal
+          onClick={(e) => e.stopPropagation()} 
+        >
+           {/* Using Next.js Image with 'fill' and 'object-contain' to ensure it fits screen nicely without stretching */}
+           <div className="relative w-full h-full">
+             <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                className="object-contain"
+                priority // Load enlarged image quickly
+              />
+           </div>
+           
+           {/* Optional caption below enlarged image */}
+           <p className="text-gray-300 text-sm mt-4 text-center max-w-3xl">{selectedImage.alt}</p>
+        </div>
+      </div>
+    )}
 
             {/* Research Item 2: Wildfire Detection (Edge AI) */}
             <div className="flex flex-col gap-8">
@@ -520,7 +616,10 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               </div>
 
               {/* ITEM 3 FIGURE & CAPTION */}
-              <div className="order-1 lg:order-2 rounded-2xl border border-white/10 shadow-2xl shadow-blue-900/20 bg-gray-900 p-2 md:p-4">
+              <div 
+  className="order-1 lg:order-2 rounded-2xl border border-white/10 shadow-2xl shadow-blue-900/20 bg-gray-900 p-2 md:p-4 cursor-pointer hover:border-blue-500/50 transition-colors"
+  onClick={() => setSelectedImage({ src: "/images/flood_detec.jpg", alt: "Figure 3: Flood detection segmentation model output" })}
+>
                 <Image 
                   src="/images/flood_detec.jpg" 
                   alt="Flood Segmentation Model" 
@@ -537,7 +636,10 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
              <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                
               {/* ITEM 4 FIGURE & CAPTION */}
-              <div className="rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4">
+              <div 
+  className="rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4 cursor-pointer hover:border-emerald-500/50 transition-colors"
+  onClick={() => setSelectedImage({ src: "/images/landslide_detec.jpg", alt: "Figure 4: Predictive landslide risk assessment" })}
+>
                 <Image 
                   src="/images/landslide_detec.jpg" 
                   alt="Landslide Mask Detection" 
@@ -576,15 +678,21 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
               </div>
             </div>
-{/* Research Item 5: Mini-MVP */}
+          {/* Research Item 5: Mini-MVP */}
              <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                
               {/* ITEM 5 FIGURE & CAPTION */}
-              <div className="rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4">
+<div 
+  className="rounded-2xl border border-white/10 shadow-2xl shadow-emerald-900/20 bg-gray-900 p-2 md:p-4 cursor-pointer hover:border-emerald-500/50 transition-colors"
+  onClick={() => setSelectedImage({ src: "/images/screenshot1.JPG", alt: "Figure 5: Interactive Mini-MVP Engineer Mode" })}
+>
+
+
+
                 <Image 
                   src="/images/screenshot1.JPG" 
                   alt="Mini-MVP Dashboard" 
-                  width={800} height={600} 
+                  width={1280} height={1024} 
                   className="w-full h-auto rounded-xl"
                 />
                  <p className="text-gray-400 text-sm mt-3 text-center leading-relaxed px-2">
