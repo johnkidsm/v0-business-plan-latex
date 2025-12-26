@@ -755,6 +755,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner5.JPG", alt: "Canadian Natural" },
               { src: "/images/partner2.JPG", alt: "Altitude Accelerator" },
               { src: "/images/partner3.png", alt: "AWS" },
+              { src: "/images/partner9.png", alt: "BDC" },
               { src: "/images/partner8.png", alt: "Enbridge" },
               { src: "/images/partner6.jpg", alt: "Nvidia" },
               { src: "/images/partner7.jpg", alt: "CED" },
