@@ -699,6 +699,8 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                     Figure 5: Interactive Mini-MVP showing Engineer Mode diagnostics and cascade path prediction.
                   </p>
 
+              
+              
               </div>
 
                <div className="order-2 lg:order-2">
@@ -735,10 +737,64 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
               </div>
             </div>
+            {/* Research Item 6: Agentic System */}
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+              
+              {/* ITEM 6 FIGURE & CAPTION (Left) */}
+              <div 
+                className="rounded-2xl border border-white/10 shadow-2xl shadow-purple-900/20 bg-gray-900 p-2 md:p-4 cursor-pointer hover:border-purple-500/50 transition-colors"
+                onClick={() => setSelectedImage({ src: "/images/agentic_arch.JPG", alt: "Figure 6: Agentic System Architecture" })}
+              >
+                <Image 
+                  src="/images/agentic_arch.JPG" 
+                  alt="Agentic System Architecture" 
+                  width={800} height={600} 
+                  className="w-full h-auto rounded-xl"
+                />
+                <p className="text-gray-400 text-sm mt-3 text-center leading-relaxed px-2">
+                  Figure 6: Multi-agent architecture orchestrating asynchronous data acquisition, prediction, and risk assessment.
+                </p>
+              </div>
+
+              {/* TEXT CONTENT (Right) */}
+              <div className="order-2 lg:order-2">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Badge variant="outline" className="border-purple-500 text-purple-400">Autonomous System</Badge>
+                  <span className="text-gray-500 text-sm">Live PoC</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Agentic Cascade Failure Detection</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  Moving beyond static models, we have deployed a multi-agent system where specialized AI agents collaborate asynchronously. The system self-regulates data ingestion, physics-informed inference, and risk assessment cycles to monitor grid stability in real-time without human intervention.
+                </p>
+                
+                {/* Capabilities Box */}
+                <div className="p-6 bg-purple-900/20 border border-purple-500/20 rounded-xl mb-6">
+                  <h4 className="text-purple-400 font-semibold mb-2">Capabilities</h4>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-purple-500 mr-2" /> Autonomous orchestration of 4 specialized AI agents.</li>
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-purple-500 mr-2" /> Physics-informed GNN predictions with 7-dimensional risk vectors.</li>
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-purple-500 mr-2" /> Self-healing data pipeline with robust error handling.</li>
+                  </ul>
+                </div>
+
+                <div className="flex gap-4">
+                  <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7412264883318190080" target="_blank" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-colors">
+                      <FaLinkedin className="w-4 h-4 mr-2"/> View on LinkedIn
+                    </Button>
+                  </Link>
+                  <Link href="https://github.com/KraftgeneAI/CascadeFailureDetection/tree/main/agentic_cascade_system" target="_blank" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto border-gray-500 text-gray-400 hover:bg-white hover:text-black transition-colors">
+                      <FaGithub className="w-4 h-4 mr-2"/> View Code
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-{/* Strategic Partners Section */}
+      {/* Strategic Partners Section */}
       <section className="py-16 bg-black border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
