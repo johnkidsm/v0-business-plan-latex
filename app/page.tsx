@@ -860,7 +860,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
       {/* Footer */}
       <footer className="bg-black text-gray-500 py-12 border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
-           <p className="text-sm md:text-base">&copy; 2025 Kraftgene AI Inc. All rights reserved.</p>
+           <p className="text-sm md:text-base">&copy; 2026 Kraftgene AI Inc. All rights reserved.</p>
         </div>
       </footer>
     </div>
