@@ -39,9 +39,8 @@ const researchImages = [
   { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
   { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
   { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
-  { src: "/images/f4.JPG", alt: "Figure 1(d): Sample Grid Graph Representation" },
-  { src: "/images/f5.JPG", alt: "Figure 1(e): Risk Assessment Framework" },
-  { src: "/images/f6.JPG", alt: "Figure 1(f): End-to-End System Data Flow" },
+  { src: "/images/f5.JPG", alt: "Figure 1(d): Risk Assessment Framework" },
+  { src: "/images/f6.JPG", alt: "Figure 1(e): End-to-End System Data Flow" },
 ];
   const nextSlide = () => {
     setCurrentSlideIdx((prevIdx) => (prevIdx === videoSlides.length - 1 ? 0 : prevIdx + 1));
