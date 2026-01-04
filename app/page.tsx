@@ -460,6 +460,11 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
               <FileText className="w-4 h-4 mr-2" /> Read Paper
             </Button>
           </Link>
+          <Link href="https://github.com/KraftgeneAI/CascadeFailureDetection/tree/main" target="_blank" className="w-full sm:w-auto">
+    <Button variant="outline" className="w-full sm:w-auto border-gray-500 text-gray-400 hover:bg-white hover:text-black transition-colors">
+      <FaGithub className="w-4 h-4 mr-2"/> View Code
+    </Button>
+  </Link>
         </div>
       </div>
 
@@ -751,7 +756,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                   className="w-full h-auto rounded-xl"
                 />
                 <p className="text-gray-400 text-sm mt-3 text-center leading-relaxed px-2">
-                  Figure 6: Multi-agent architecture orchestrating asynchronous data acquisition, prediction, and risk assessment.
+                  Figure 6: Agentic Cascade Failure Detection System Architecture
                 </p>
               </div>
 
@@ -777,6 +782,11 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
 
                 <div className="flex gap-4">
+                  <Link href="https://www.techrxiv.org/users/880618/articles/1375885-agentic-ai-for-autonomous-cascade-failure-detection-and-response-in-critical-energy-infrastructure-proof-of-concept-implementation-and-validation-framework-for-multi-agent-decision-systems" target="_blank" className="w-full sm:w-auto">
+    <Button variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-950 hover:text-purple-300 transition-colors w-full sm:w-auto">
+      <FileText className="w-4 h-4 mr-2" /> Read Paper
+    </Button>
+  </Link>
                   <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7412264883318190080" target="_blank" className="w-full sm:w-auto">
                     <Button variant="outline" className="w-full sm:w-auto border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-colors">
                       <FaLinkedin className="w-4 h-4 mr-2"/> View on LinkedIn
