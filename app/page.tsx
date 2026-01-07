@@ -39,8 +39,7 @@ const researchImages = [
   { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
   { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
   { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
-  { src: "/images/f5.JPG", alt: "Figure 1(d): Risk Assessment Framework" },
-  { src: "/images/f6.JPG", alt: "Figure 1(e): End-to-End System Data Flow" },
+  { src: "/images/f6.JPG", alt: "Figure 1(d): End-to-End System Data Flow" },
 ];
   const nextSlide = () => {
     setCurrentSlideIdx((prevIdx) => (prevIdx === videoSlides.length - 1 ? 0 : prevIdx + 1));
@@ -494,7 +493,7 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
         </div>
         {/* Combined Caption */}
         <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center leading-relaxed px-2">
-          <strong>Figures 1(a)-(f):</strong> Complete system overview covering high-level architecture, data source integration, grid graph representation, tensor-based fusion processing, risk assessment framework, and end-to-end data flow pipeline. Click images to enlarge.
+          <strong>Figures 1(a)-(d):</strong> Complete system overview covering high-level architecture, data source integration, tensor-based fusion processing, and end-to-end data flow pipeline. Click images to enlarge.
         </p>
       </div>
     </div>
