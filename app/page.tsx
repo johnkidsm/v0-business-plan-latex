@@ -825,7 +825,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner8.png", alt: "Enbridge" },
               { src: "/images/partner6.jpg", alt: "Nvidia" },
               { src: "/images/partner7.jpg", alt: "CED" },
-              { src: "/images/partner10.jpg", alt: "Google" },
+              { src: "/images/partner10.JPG", alt: "Google" },
             ].map((partner, index) => (
               <div 
                 key={index} 
