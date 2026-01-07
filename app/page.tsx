@@ -39,6 +39,8 @@ const researchImages = [
   { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
   { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
   { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
+  { src: "/images/f4.JPG", alt: "Figure 1(c): Sample topology" },
+  { src: "/images/f5.JPG", alt: "Figure 1(c): Risk management" },
   { src: "/images/f6.JPG", alt: "Figure 1(d): End-to-End System Data Flow" },
 ];
   const nextSlide = () => {
@@ -493,7 +495,7 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
         </div>
         {/* Combined Caption */}
         <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center leading-relaxed px-2">
-          <strong>Figures 1(a)-(d):</strong> Complete system overview covering high-level architecture, data source integration, tensor-based fusion processing, and end-to-end data flow pipeline. Click images to enlarge.
+          <strong>Figures 1(a)-(d):</strong> Complete system overview covering high-level architecture, data source integration, risk management, tensor-based fusion processing, and end-to-end data flow pipeline. Click images to enlarge.
         </p>
       </div>
     </div>
@@ -823,6 +825,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner8.png", alt: "Enbridge" },
               { src: "/images/partner6.jpg", alt: "Nvidia" },
               { src: "/images/partner7.jpg", alt: "CED" },
+              { src: "/images/partner10.jpg", alt: "Google" },
             ].map((partner, index) => (
               <div 
                 key={index} 
