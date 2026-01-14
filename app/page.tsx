@@ -134,19 +134,29 @@ export default function HomePage() {
             
             {/* Logo */}
             <div className="flex items-center space-x-2 z-50">
-              <Link href="#about" className="flex items-center space-x-2 group" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="w-8 h-8 md:w-10 md:h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
-                  <Image
-                    src="/images/kraftgene-logo.jpg"
-                    alt="Kraftgene AI"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span className="text-lg md:text-xl font-bold text-white group-hover:text-gray-300 transition-colors truncate max-w-[200px] sm:max-w-none">Kraftgene AI Inc.</span>
-              </Link>
-            </div>
+  <Link href="#about" className="flex items-center space-x-3 group" onClick={() => setIsMobileMenuOpen(false)}>
+    {/* Logo Container */}
+    <div className="w-8 h-8 md:w-10 md:h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
+      <Image
+        src="/images/kraftgene-logo.jpg"
+        alt="Kraftgene AI"
+        width={40}
+        height={40}
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* Brand Text Stack */}
+    <div className="flex flex-col leading-tight">
+      <span className="text-lg md:text-xl font-bold text-white group-hover:text-gray-300 transition-colors truncate max-w-[200px] sm:max-w-none">
+        Kraftgene AI Inc.
+      </span>
+      <span className="text-[10px] md:text-xs font-medium text-gray-400 group-hover:text-gray-300 transition-colors">
+        Empowering a Sustainable Energy Future.
+      </span>
+    </div>
+  </Link>
+</div>
 
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center space-x-1">
