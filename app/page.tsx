@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { 
   ArrowRight, MapPin, Mail, FileText, Activity, Zap, 
   ShieldCheck, Brain, Leaf, CheckCircle, Download, Cpu, 
-  Network, Map, Menu, X 
+  Network, Map, Menu, X, Droplet, Sun, Layers, Wind
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -24,25 +24,27 @@ export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // New State for Mobile Menu
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-// Add this definition above your component or inside the file
-type SelectedImage = {
-  src: string;
-  alt: string;
-  type?: 'image' | 'video'; // Include this if you kept the video logic, otherwise optional
-};
 
-// Update the hook inside your component
-const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null);
+  // Add this definition above your component or inside the file
+  type SelectedImage = {
+    src: string;
+    alt: string;
+    type?: 'image' | 'video'; // Include this if you kept the video logic, otherwise optional
+  };
 
-// 2. Define image data array for cleaner rendering and easier click handling
-const researchImages = [
-  { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
-  { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
-  { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
-  { src: "/images/f4.JPG", alt: "Figure 1(c): Sample topology" },
-  { src: "/images/f5.JPG", alt: "Figure 1(c): Risk management" },
-  { src: "/images/f6.JPG", alt: "Figure 1(d): End-to-End System Data Flow" },
-];
+  // Update the hook inside your component
+  const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null);
+
+  // 2. Define image data array for cleaner rendering and easier click handling
+  const researchImages = [
+    { src: "/images/f1.JPG", alt: "Figure 1(a): High-Level System Architecture" },
+    { src: "/images/f2.JPG", alt: "Figure 1(b): Data Source Integration Architecture" },
+    { src: "/images/f3.JPG", alt: "Figure 1(c): Fusion Processing Architecture" },
+    { src: "/images/f4.JPG", alt: "Figure 1(c): Sample topology" },
+    { src: "/images/f5.JPG", alt: "Figure 1(c): Risk management" },
+    { src: "/images/f6.JPG", alt: "Figure 1(d): End-to-End System Data Flow" },
+  ];
+
   const nextSlide = () => {
     setCurrentSlideIdx((prevIdx) => (prevIdx === videoSlides.length - 1 ? 0 : prevIdx + 1));
   };
@@ -71,16 +73,13 @@ const researchImages = [
     }
   }, [currentSlideIdx]);
 
-// Handle ESC key press to close modal
+  // Handle ESC key press to close modal
   useEffect(() => {
-    // Add ': KeyboardEvent' after the event parameter
-const handleKeyDown = (event: KeyboardEvent) => {
-  if (event.key === 'Escape') {
-    setSelectedImage(null);
-  }
-};
-
-
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
     
     if (selectedImage) {
       window.addEventListener('keydown', handleKeyDown);
@@ -234,11 +233,11 @@ const handleKeyDown = (event: KeyboardEvent) => {
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Building the Future of <br className="hidden md:block"/>
-              <span className="text-emerald-500 block md:inline mt-2 md:mt-0">Energy Infrastructure Protection</span>
+              <span className="text-emerald-500 block md:inline mt-2 md:mt-0">Critical Infrastructure Resilience</span>
             </h1>
             
             <p className="text-base md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto px-2">
-              Kraftgene AI is developing innovative artificial intelligence solutions to integrate environmental threat detection with energy infrastructure monitoring, agentic AI and robotics for world's sustainable energy future.
+            Kraftgene AI is developing the EnergyEminence platform—a Unified Critical Infrastructure Operating System integrating environmental threat detection with autonomous robotics and AI agents to protect and quantifiably optimize the performance of Utility Grids, Oil & Gas pipelines, and Renewable assets.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
@@ -277,12 +276,12 @@ const handleKeyDown = (event: KeyboardEvent) => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Kraftgene AI</h2>
               <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
                 Founded in Toronto, Ontario, Kraftgene AI is an early-stage startup focused on developing artificial intelligence solutions for the energy sector. We are working to create innovative technologies that will help protect Canada's energy infrastructure while supporting environmental sustainability.
-<br /><br />
-Our team is passionate about leveraging cutting-edge AI, machine learning, and data analytics to address the complex challenges facing Canada's energy industry in an era of climate change.
+                <br /><br />
+                Our platform acts as a "Single Pane of Glass" for energy convergence. Whether monitoring electron flow in utility grids or fluid dynamics in pipelines, our core AI engine unifies infrastructure health with environmental intelligence to address the complex challenges of a changing climate.
               </p>
               <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Based in Toronto, Ontario</li>
-                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Focus on AI and energy infrastructure</li>
+                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Unified OS for Utility & O&G</li>
+                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Physics-Informed AI (GNNs)</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Committed to environmental sustainability</li>
               </ul>
             </div>
@@ -304,23 +303,83 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
         </div>
       </section>
 
+      {/* NEW SECTION: Unified Sector Solutions */}
+      <section className="py-16 bg-black border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+                <Badge variant="outline" className="mb-4 border-blue-500 text-blue-400">Sector Convergence</Badge>
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">One Platform. Multiple Industries.</h2>
+                <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                    EnergyEminence bridges the gap between sectors. Our AI agents operate at the edge, optimizing everything from substation voltage to pipeline pressure.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Utilities Column */}
+                <div className="bg-gray-900/50 p-8 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all">
+                    <div className="bg-emerald-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <Zap className="w-7 h-7 text-emerald-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Utilities</h3>
+                    <p className="text-gray-400 mb-6">
+                        Eliminating cascading failures through Graph Neural Networks. We provide vegetation management, flood risk monitoring for substations, and automated load balancing.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-emerald-500 mr-2"/> Grid Physics (Voltage/Freq)</li>
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-emerald-500 mr-2"/> Wildfire Prevention</li>
+                    </ul>
+                </div>
+
+                {/* Oil & Gas Column */}
+                <div className="bg-gray-900/50 p-8 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-all">
+                    <div className="bg-blue-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <Droplet className="w-7 h-7 text-blue-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Oil & Gas</h3>
+                    <p className="text-gray-400 mb-6">
+                        Ensuring integrity and compliance. Autonomous drones monitor pipelines for leaks, landslides, and encroachment while automating emissions tracking for EPA standards.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-blue-500 mr-2"/> Flow Physics (Pressure)</li>
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-blue-500 mr-2"/> Leak & Encroachment AI</li>
+                    </ul>
+                </div>
+
+                {/* Renewables Column */}
+                <div className="bg-gray-900/50 p-8 rounded-2xl border border-white/10 hover:border-yellow-500/30 transition-all">
+                    <div className="bg-yellow-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                        <Sun className="w-7 h-7 text-yellow-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Renewables</h3>
+                    <p className="text-gray-400 mb-6">
+                        Integrating Distributed Energy Resources (DERs). Our edge agents create Virtual Power Plants (VPPs) by coordinating solar, wind, and battery storage autonomously.
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-yellow-500 mr-2"/> DER Integration</li>
+                        <li className="flex items-center"><ArrowRight className="w-4 h-4 text-yellow-500 mr-2"/> Edge-Agent Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </section>
+
        <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Our Vision</h2>
             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-              We envision a future where artificial intelligence seamlessly protects world's energy infrastructure while safeguarding the environment. Our goal is to develop comprehensive AI solutions that integrate environmental intelligence, energy infrastructure monitoring, and real-time data from robotics like drones and ground robots to protect world's critical energy systems. We also envision a future where we extend our platform with an AI Agent System that introduces autonomous decision-making. This multi-agent architecture will enable automated grid stabilization, threat response, and emissions optimization to reduce system response times from minutes to seconds.
+              We envision a future where artificial intelligence seamlessly protects world's energy infrastructure—from pipelines to power lines—while safeguarding the environment. Our goal is to develop comprehensive AI solutions that integrate environmental intelligence, energy infrastructure monitoring, and real-time data from robotics. We are extending our platform with an AI Agent System for autonomous decision-making, enabling automated grid stabilization, valve control, threat response, and emissions optimization.
             </p>
           </div>
 
           {/* Vision Feature Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {[
-                { icon: ShieldCheck, color: "text-red-500", bg: "bg-red-500/10", title: "Environmental Protection", desc: "Early detection and monitoring of environmental threats" },
-                { icon: Zap, color: "text-orange-500", bg: "bg-orange-500/10", title: "Infrastructure Security", desc: "Protecting critical energy systems and assets" },
-                { icon: Brain, color: "text-purple-500", bg: "bg-purple-500/10", title: "AI Innovation", desc: "Advanced machine learning, predictive analytics and agentic system" },
-                { icon: Leaf, color: "text-emerald-500", bg: "bg-emerald-500/10", title: "Sustainable Future", desc: "Supporting Canada's clean energy transition" }
+                { icon: ShieldCheck, color: "text-red-500", bg: "bg-red-500/10", title: "Environmental Protection", desc: "Early detection of wildfires, floods, and emissions" },
+                { icon: Layers, color: "text-orange-500", bg: "bg-orange-500/10", title: "Unified Infrastructure", desc: "Protecting Grids, Pipelines and Renewables" },
+                { icon: Brain, color: "text-purple-500", bg: "bg-purple-500/10", title: "AI Innovation", desc: "Physics-Informed Learning & Agentic Swarms" },
+                { icon: Leaf, color: "text-emerald-500", bg: "bg-emerald-500/10", title: "Sustainable Future", desc: "Supporting the clean energy transition & compliance" }
               ].map((card, i) => (
                 <div key={i} className="bg-gray-900/50 border border-white/10 rounded-2xl p-6 md:p-8 text-center hover:bg-gray-900 transition-colors">
                   <div className={`${card.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6`}>
@@ -344,7 +403,7 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
             <Badge variant="outline" className="mb-4 border-white/20 text-gray-400 uppercase tracking-wider text-xs">Technical Documentation</Badge>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">System Architecture & Roadmap</h2>
             <p className="text-lg md:text-xl text-gray-400">
-              Deep dive into our engineering standards. From our foundational data acquisition platform to our roadmap for autonomous agentic systems.
+              Deep dive into our engineering standards. From our foundational data acquisition platform handling Grid & Flow Physics to our roadmap for autonomous agentic systems.
             </p>
           </div>
 
@@ -364,13 +423,13 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
                 
                 <h3 className="text-2xl font-bold text-white mb-4">EnergyEminence Foundation</h3>
                 <p className="text-gray-400 mb-8 leading-relaxed h-auto md:h-20">
-                  The core system design for high-frequency data acquisition, multi-modal environmental analytics, and robotic fleet integration.
+                  The core system design for high-frequency data acquisition, multi-modal environmental analytics, and robotic fleet integration across utility and pipeline assets.
                 </p>
 
                 <div className="space-y-3 mb-10 border-t border-white/5 pt-6">
                   <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">System Specifications</h4>
                   <ul className="space-y-3">
-                    {["Real-time Telemetry Fusion", "Predictive Analytics Engine", "Robotic Control Interface"].map((item, i) => (
+                    {["Real-time Telemetry (SCADA/Pipeline)", "Physics-Informed Analytics Engine", "Robotic Control Interface"].map((item, i) => (
                       <li key={i} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-emerald-500 mr-3 shrink-0" /> {item}
                       </li>
@@ -400,14 +459,14 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
                 
                 <h3 className="text-2xl font-bold text-white mb-4">AI Agentic System Extension</h3>
                 <p className="text-gray-400 mb-8 leading-relaxed h-auto md:h-20">
-                  Our roadmap for transitioning from predictive monitoring to autonomous decision-making agents for grid self-healing.
+                  Our roadmap for transitioning from predictive monitoring to autonomous decision-making agents for grid self-healing and pipeline isolation.
                 </p>
 
                 <div className="space-y-3 mb-10 border-t border-white/5 pt-6">
                   <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Capabilities Roadmap</h4>
                   <ul className="space-y-3">
-                    {["Autonomous Grid Stabilization", "Multi-Agent Response Swarms", "Automated Emissions Optimization"].map((item, i) => (
-                       <li key={i} className="flex items-center text-gray-300 text-sm">
+                    {["Autonomous Grid & Flow Stabilization", "Multi-Agent Response Swarms", "Automated Emissions & DER Optimization"].map((item, i) => (
+                        <li key={i} className="flex items-center text-gray-300 text-sm">
                         <Brain className="w-4 h-4 text-purple-500 mr-3 shrink-0" /> {item}
                       </li>
                     ))}
@@ -432,7 +491,7 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
           <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Latest Research & Innovations</h2>
             <p className="text-lg md:text-xl text-gray-400">
-              From the lab to the grid. We are pioneering the next generation of predictive AI and autonomous systems.
+              From the lab to the field. Our predictive AI works across vectors—whether it's a transmission tower or a gas pipeline corridor.
             </p>
           </div>
 
@@ -527,12 +586,12 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
            {/* Using Next.js Image with 'fill' and 'object-contain' to ensure it fits screen nicely without stretching */}
            <div className="relative w-full h-full">
              <Image
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                fill
-                className="object-contain"
-                priority // Load enlarged image quickly
-              />
+               src={selectedImage.src}
+               alt={selectedImage.alt}
+               fill
+               className="object-contain"
+               priority // Load enlarged image quickly
+             />
            </div>
            
            {/* Optional caption below enlarged image */}
@@ -550,7 +609,7 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Real-Time Edge Wildfire Detection</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                  Relying on the cloud is too slow for wildfire response. Our new YOLO-based model runs directly on the embedded processors of autonomous drones. It identifies fire threats instantly, without a network connection.
+                  Relying on the cloud is too slow for wildfire response. Our new YOLO-based model runs directly on the embedded processors of autonomous drones. It identifies fire threats instantly, whether over power lines or pipeline corridors.
                 </p>
                 <div className="grid grid-cols-3 gap-2 md:gap-4 mb-8">
                   {[
@@ -598,16 +657,16 @@ Our team is passionate about leveraging cutting-edge AI, machine learning, and d
                 <div className="flex items-center space-x-3 mb-4">
                   <Badge variant="outline" className="border-blue-500 text-blue-400">Computer Vision</Badge>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Flood Detection for Grid Resilience</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Flood Detection for Infrastructure Resilience</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                   Detecting floodwaters in muddy, complex terrain is notoriously difficult. Our custom segmentation models distinguish actual water threats from harmless background noise, providing the "eye in the sky" needed to protect substations.
+                   Detecting floodwaters in muddy, complex terrain is notoriously difficult. Our custom segmentation models distinguish actual water threats from harmless background noise, protecting substations and valve stations alike.
 <br /><br />
-These visual insights serve as dynamic inputs for our failure analysis, predicting how the grid will react to rising waters minutes before a substation is submerged.
+These visual insights serve as dynamic inputs for our failure analysis, predicting how the infrastructure will react to rising waters minutes before submersion.
                 </p>
                 <div className="p-6 bg-blue-900/20 border border-blue-500/20 rounded-xl mb-6 mt-6">
   <h4 className="text-blue-400 font-semibold mb-2">Impact</h4>
   <p className="text-gray-300 text-sm">
-    Provides precise flood mapping around substations, allowing operators to deploy defenses or isolate equipment before water breaches critical levels.
+    Provides precise flood mapping around critical assets, allowing operators to deploy defenses or isolate equipment before water breaches critical levels.
   </p>
 </div>
                 <div className="flex gap-4 mt-6">
@@ -663,14 +722,14 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Predictive Landslide Risk</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                   Our framework fuses satellite imagery with real-time SCADA telemetry to pinpoint landslide risks with high true-positive rates and minimal false positives (7.8%).
+                   Our framework fuses satellite imagery with real-time SCADA telemetry to pinpoint landslide risks with high true-positive rates and minimal false positives (7.8%). This is critical for both transmission towers and pipeline integrity management.
                 </p>
                 
                 {/* Impact Box */}
                 <div className="p-6 bg-emerald-900/20 border border-emerald-500/20 rounded-xl mb-6">
                   <h4 className="text-emerald-400 font-semibold mb-2">Impact</h4>
                   <p className="text-gray-300 text-sm">
-                    Enables operators to de-energize lines or reroute power 15-35 minutes before physical impact, preventing cascading blackouts and wildfires.
+                    Enables operators to de-energize lines or reroute power/flow 15-35 minutes before physical impact, preventing cascading blackouts, leaks, and wildfires.
                   </p>
                 </div>
 
@@ -715,7 +774,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Interactive Mini-MVP: Physics-Informed Cascade Detection</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                   A streamlined, interactive demonstration of our core AI engine designed for technical validation. This Mini-MVP allows engineering teams to explore failure scenarios using synthetic data, showcasing our "Zero-Miss" architecture.
+                   A streamlined, interactive demonstration of our core AI engine designed for technical validation. This Mini-MVP allows engineering teams to explore failure scenarios using synthetic data, showcasing our "Zero-Miss" architecture for critical infrastructure.
                 </p>
                 
                 {/* Impact Box */}
@@ -724,7 +783,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Tuned for "Zero-Miss" sensitivity (100% event recall).</li>
                     <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Interactive "Engineer Mode" for deep signal diagnostics.</li>
-                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Adheres to physics-based power flow constraints.</li>
+                    <li className="flex items-center"><ArrowRight className="h-3 w-3 text-emerald-500 mr-2" /> Adheres to physics-based power and flow constraints.</li>
                   </ul>
                 </div>
 
@@ -769,7 +828,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Agentic Cascade Failure Detection</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
-                  Moving beyond static models, we have deployed a multi-agent system where specialized AI agents collaborate asynchronously. The system self-regulates data ingestion, physics-informed inference, and risk assessment cycles to monitor grid stability in real-time without human intervention.
+                  Moving beyond static models, we have deployed a multi-agent system where specialized AI agents collaborate asynchronously. The system self-regulates data ingestion, physics-informed inference, and risk assessment cycles to monitor stability in real-time without human intervention.
                 </p>
                 
                 {/* Capabilities Box */}
