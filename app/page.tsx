@@ -895,10 +895,14 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner6.jpg", alt: "Nvidia" },
               { src: "/images/partner7.jpg", alt: "CED" },
               { src: "/images/partner10.JPG", alt: "Google" },
+              { src: "/images/partner11.PNG", alt: "MS" },
+              { src: "/images/partner12.PNG", alt: "YOTTA" },
+              { src: "/images/partner13.PNG", alt: "NEBIUS" },
+              { src: "/images/partner14.PNG", alt: "Scaleway" },
             ].map((partner, index) => (
               <div 
                 key={index} 
-                className="group bg-white rounded-xl p-4 w-40 h-24 md:w-52 md:h-28 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+                className="group bg-white rounded-xl p-4 w-30 h-24 md:w-32 md:h-28 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 <div className="relative w-full h-full">
                   <Image
