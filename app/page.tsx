@@ -900,6 +900,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner13.PNG", alt: "NEBIUS" },
               { src: "/images/partner14.PNG", alt: "Scaleway" },
               { src: "/images/partner15.PNG", alt: "Lambda" },
+              { src: "/images/partner16.PNG", alt: "ExciteLab" },
             ].map((partner, index) => (
               <div 
                 key={index} 
