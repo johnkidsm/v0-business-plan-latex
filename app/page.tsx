@@ -247,7 +247,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-base md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto px-2">
-            Kraftgene AI is developing the EnergyEminence platform—a Unified Critical Infrastructure Operating System integrating environmental threat detection with autonomous robotics and AI agents to protect and quantifiably optimize the performance of Utility Grids, Oil & Gas pipelines, and Renewable assets.
+            Kraftgene AI is developing the EnergyEminence platform—a Unified Critical Infrastructure Operating System integrating high-fidelity digital twins and immersive visualization with environmental threat detection, autonomous robotics, and AI agents to protect and quantifiably optimize the performance of Utility Grids, Oil & Gas pipelines, and Renewable assets.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
@@ -287,7 +287,7 @@ export default function HomePage() {
               <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
                 Founded in Toronto, Ontario, Kraftgene AI is an early-stage startup focused on developing artificial intelligence solutions for the energy sector. We are working to create innovative technologies that will help protect Canada's energy infrastructure while supporting environmental sustainability.
                 <br /><br />
-                Our platform acts as a "Single Pane of Glass" for energy convergence. Whether monitoring electron flow in utility grids or fluid dynamics in pipelines, our core AI engine unifies infrastructure health with environmental intelligence to address the complex challenges of a changing climate.
+                Our platform acts as a "Single Pane of Glass" for energy convergence, driving operational efficiency across the sector. Whether monitoring electron flow in utility grids or fluid dynamics in pipelines, our core AI engine unifies infrastructure health with environmental intelligence through real-time digital twin visualization. This integrated view enables autonomous robotic responses to address critical risks and the complex challenges of a changing climate.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-3 shrink-0" /> Unified OS for Utility & O&G</li>
@@ -379,7 +379,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">Our Vision</h2>
             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-              We envision a future where artificial intelligence seamlessly protects world's energy infrastructure—from pipelines to power lines—while safeguarding the environment. Our goal is to develop comprehensive AI solutions that integrate environmental intelligence, energy infrastructure monitoring, and real-time data from robotics. We are extending our platform with an AI Agent System for autonomous decision-making, enabling automated grid stabilization, valve control, threat response, and emissions optimization.
+            We envision a future where artificial intelligence seamlessly protects the world's energy infrastructure—from pipelines to power lines—while safeguarding the environment. Our goal is to develop comprehensive AI solutions that integrate interactive digital twins, environmental intelligence, energy infrastructure monitoring, and real-time data from robotics. We are extending our platform with an AI Agent System for autonomous decision-making, enabling automated grid stabilization, valve control, threat response, and emissions optimization.
             </p>
           </div>
 
