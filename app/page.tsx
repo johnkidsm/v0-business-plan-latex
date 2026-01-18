@@ -413,7 +413,7 @@ export default function HomePage() {
             <Badge variant="outline" className="mb-4 border-white/20 text-gray-400 uppercase tracking-wider text-xs">Technical Documentation</Badge>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">System Architecture & Roadmap</h2>
             <p className="text-lg md:text-xl text-gray-400">
-              Deep dive into our engineering standards. From our foundational data acquisition platform handling Grid & Flow Physics to our roadmap for autonomous agentic systems.
+            Explore the engineering behind EnergyEminence. From our foundational data acquisition platform handling complex Grid & Flow Physics to our advanced visualization standards and roadmap for autonomous agentic systems, we are building the future of infrastructure resilience.
             </p>
           </div>
 
