@@ -320,7 +320,7 @@ export default function HomePage() {
                 <Badge variant="outline" className="mb-4 border-blue-500 text-blue-400">Sector Convergence</Badge>
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">One Platform. Multiple Industries.</h2>
                 <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-                    EnergyEminence bridges the gap between sectors. Our AI agents operate at the edge, optimizing everything from substation voltage to pipeline pressure.
+                EnergyEminence bridges the gap between sectors with a highly modular architecture designed for seamless exchangeability across all industrial scenarios. Our AI agents operate at the edge, delivering fast, efficient, and comprehensive optimization—from substation voltage to pipeline pressure—ensuring real-time operational resilience.
                 </p>
             </div>
 
