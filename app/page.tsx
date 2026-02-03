@@ -516,28 +516,38 @@ export default function HomePage() {
           name: "Yu Nong (John)",
           role: "Founder & CEO",
           image: "images/me.jpg",
+          linkedin: "https://www.linkedin.com/in/nongyu/",
           bio: "John blends visionary leadership with expertise in ML, software engineering, and robotics to drive global infrastructure resilience.",
         },
         {
           name: "Mohd Atir",
           role: "Cofounder & VP of Engineering",
           image: "images/Atir.jpg",
+          linkedin: "https://www.linkedin.com/in/mohd-atir-ca/",
           bio: "With over 15 years of expertise in AI/ML, full-stack development, and MLOps, Mohd leads our engineering efforts to build robust and scalable platforms.",
         },
         {
           name: "Min Li",
           role: "Cofounder & Lead AI Engineer",
           image: "images/min_li.jpg",
+          linkedin: "https://www.linkedin.com/in/min-lee0/",
           bio: "Min specializes in ML systems, PyTorch, GNNs, and real-time inference, driving the development of our core predictive analytics capabilities.",
         },
         {
           name: "Husnain Ali",
           role: "Cofounder & CTO",
           image: "images/husnain.png",
+          linkedin: "https://www.linkedin.com/in/husnain-ali-ai/",
           bio: "Husnain steers technical strategy and cross-functional teams with expertise in Agentic AI, full-stack architecture, and automation.",
         },
       ].map((member, index) => (
-        <div key={index} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 text-center">
+        <a 
+          key={index} 
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 text-center block cursor-pointer"
+        >
           <div className="relative w-32 h-32 mx-auto mb-6">
             <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-lg group-hover:bg-emerald-500/40 transition-all"></div>
             <div className="relative w-full h-full rounded-full border-2 border-emerald-500/30 overflow-hidden">
@@ -554,7 +564,7 @@ export default function HomePage() {
           <p className="text-gray-400 text-sm leading-relaxed">
             {member.bio}
           </p>
-        </div>
+        </a>
       ))}
     </div>
   </div>
