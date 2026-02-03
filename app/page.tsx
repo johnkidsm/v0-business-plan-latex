@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { 
   ArrowRight, MapPin, Mail, FileText, Activity, Zap, 
   ShieldCheck, Brain, Leaf, CheckCircle, Download, Cpu, 
-  Network, Map, Menu, X, Droplet, Sun, Layers, Wind
+  Network, Map, Menu, X, Droplet, Sun, Layers, Wind, Users
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -494,6 +494,71 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+{/* Co-founding Team Section */}
+<section id="team" className="py-24 bg-black border-t border-white/5">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <Badge className="mb-4 bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-4 py-1 text-sm">
+        Our Leadership
+      </Badge>
+      <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+        Meet Our Co-founding Team
+      </h2>
+      <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+        A diverse group of experts in AI, robotics, and engineering dedicated to building resilient critical infrastructure.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          name: "Yu Nong (John)",
+          role: "Founder & CEO",
+          image: "images/me.jpg",
+          bio: "John blends visionary leadership with expertise in ML, software engineering, and robotics to drive global infrastructure resilience.",
+        },
+        {
+          name: "Mohd Atir",
+          role: "Cofounder & VP of Engineering",
+          image: "images/Atir.jpg",
+          bio: "With over 15 years of expertise in AI/ML, full-stack development, and MLOps, Mohd leads our engineering efforts to build robust and scalable platforms.",
+        },
+        {
+          name: "Min Li",
+          role: "Cofounder & Lead AI Engineer",
+          image: "images/min_li.jpg",
+          bio: "Min specializes in ML systems, PyTorch, GNNs, and real-time inference, driving the development of our core predictive analytics capabilities.",
+        },
+        {
+          name: "Husnain Ali",
+          role: "Cofounder & CTO",
+          image: "images/husnain.png",
+          bio: "Husnain steers technical strategy and cross-functional teams with expertise in Agentic AI, full-stack architecture, and automation.",
+        },
+      ].map((member, index) => (
+        <div key={index} className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 text-center">
+          <div className="relative w-32 h-32 mx-auto mb-6">
+            <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-lg group-hover:bg-emerald-500/40 transition-all"></div>
+            <div className="relative w-full h-full rounded-full border-2 border-emerald-500/30 overflow-hidden">
+              <Image 
+                src={member.image} 
+                alt={member.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+          <p className="text-emerald-500 text-sm font-medium mb-4">{member.role}</p>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            {member.bio}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Research & Innovation Section */}
       <section id="research" className="py-16 md:py-24 bg-black border-t border-white/10">
