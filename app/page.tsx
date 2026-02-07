@@ -152,9 +152,9 @@ export default function HomePage() {
                     Kraftgene AI Inc.
                   </span>
                   {/* 2. Added "Made in Canada" */}
-                  <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest leading-none mb-0.5">
-                    Made in Canada
-                  </span>
+                  <span className="text-[10px] font-bold text-[#AA8239] uppercase tracking-widest leading-none mb-0.5">
+  Made in Canada
+</span>
                   <span className="text-[10px] font-medium text-gray-500 group-hover:text-gray-400 transition-colors leading-none">
                     Empowering a Sustainable Energy Future.
                    </span>
