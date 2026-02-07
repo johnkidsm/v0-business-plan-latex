@@ -996,6 +996,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
               { src: "/images/partner16.PNG", alt: "ExciteLab" },
               { src: "/images/partner17.PNG", alt: "FreeEelectron" },
               { src: "/images/partner18.PNG", alt: "CVL" },
+              { src: "/images/partner19.PNG", alt: "RBC" },
             ].map((partner, index) => (
               <div 
                 key={index} 
