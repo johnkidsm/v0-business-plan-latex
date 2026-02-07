@@ -127,65 +127,80 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-emerald-500/30">
       
-      {/* Navigation */}
-      <nav className="border-b border-white/10 bg-black/95 backdrop-blur sticky top-0 z-50">
+{/* Navigation */}
+<nav className="border-b border-white/10 bg-black/95 backdrop-blur sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            
-            {/* Logo */}
-            <div className="flex items-center space-x-2 z-50">
-  <Link href="#about" className="flex items-center space-x-3 group" onClick={() => setIsMobileMenuOpen(false)}>
-    {/* Logo Container */}
-    <div className="w-8 h-8 md:w-10 md:h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
-      <Image
-        src="/images/kraftgene-logo.jpg"
-        alt="Kraftgene AI"
-        width={40}
-        height={40}
-        className="w-full h-full object-cover"
-      />
-    </div>
+          <div className="flex justify-between items-center py-3">
 
-    {/* Brand Text Stack */}
-    <div className="flex flex-col leading-tight">
-      <span className="text-lg md:text-xl font-bold text-white group-hover:text-gray-300 transition-colors truncate max-w-[200px] sm:max-w-none">
-        Kraftgene AI Inc.
-      </span>
-      <span className="text-[10px] md:text-xs font-medium text-gray-400 group-hover:text-gray-300 transition-colors">
-        Empowering a Sustainable Energy Future.
-      </span>
-    </div>
-  </Link>
-</div>
+            {/* Logo & Brand - Left Side */}
+             <div className="flex items-center space-x-2 z-50">
+              <Link href="#about" className="flex items-center space-x-3 group" onClick={() => setIsMobileMenuOpen(false)}>
+                {/* Logo Container */}
+                <div className="w-8 h-8 md:w-10 md:h-10 relative rounded overflow-hidden group-hover:opacity-80 transition-opacity">
+                  <Image
+                    src="/images/kraftgene-logo.jpg"
+                    alt="Kraftgene AI"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center space-x-1">
+                {/* Brand Text Stack */}
+                 <div className="flex flex-col justify-center">
+                  <span className="text-base md:text-lg font-bold text-white group-hover:text-gray-300 transition-colors leading-none mb-1">
+                    Kraftgene AI Inc.
+                  </span>
+                  {/* 2. Added "Made in Canada" */}
+                  <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest leading-none mb-0.5">
+                    Made in Canada
+                  </span>
+                  <span className="text-[10px] font-medium text-gray-500 group-hover:text-gray-400 transition-colors leading-none">
+                    Empowering a Sustainable Energy Future.
+                   </span>
+                </div>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation - Right Side */}
+            <div className="hidden xl:flex items-center gap-2">
+               
+               {/* 1. Refined Buttons (Smaller, Cleaner) & 3. Added Team Button */}
                <Link href="#about">
-                 <Button 
-                   variant="ghost" 
-                   className="text-gray-300 hover:text-white hover:bg-white/10 h-12 text-xl px-6"
-                 >
+                 <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10 h-9 px-4 text-sm font-medium rounded-md">
                    About
                  </Button>
                </Link>
 
-               <SocialButtons />
+               <Link href="#team">
+                 <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10 h-9 px-4 text-sm font-medium rounded-md">
+                   Team
+                 </Button>
+               </Link>
+
+               <Link href="#roadmap">
+                 <Button variant="ghost" className="text-gray-300 hover:text-emerald-400 hover:bg-emerald-500/10 h-9 px-4 text-sm font-medium rounded-md">
+                   <Map className="w-3 h-3 mr-2"/> Roadmap
+                 </Button>
+               </Link>
+
+               {/* Separator line for visual hierarchy */}
+               <div className="h-6 w-px bg-white/10 mx-2"></div>
+
+                <SocialButtons />
                
-              <Link href="#contact">
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white ml-2 border-0 h-12 px-6 text-lg">Get in Touch</Button>
-              </Link>
-              
-              <Link href="#roadmap">
-                <Button variant="outline" className="text-emerald-400 border-emerald-500/50 hover:bg-emerald-400 hover:text-black transition-colors ml-2 h-12 px-6 text-lg">
-                   <Map className="w-4 h-4 mr-2"/> Roadmap
+               <Link href="#contact">
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white border-0 h-9 px-5 text-sm font-medium ml-2 shadow-lg shadow-emerald-900/20 rounded-md">
+                  Get in Touch
                 </Button>
               </Link>
             </div>
 
             {/* Mobile Menu Toggle */}
-            <div className="xl:hidden flex items-center z-50">
+             <div className="xl:hidden flex items-center z-50">
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                    {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                    {isMobileMenuOpen ?
+                     <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </Button>
             </div>
           </div>
@@ -193,22 +208,25 @@ export default function HomePage() {
 
         {/* Mobile Navigation Dropdown */}
         {isMobileMenuOpen && (
-            <div className="xl:hidden absolute top-full left-0 w-full bg-black/95 border-b border-white/10 backdrop-blur-xl p-6 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top-5">
+             <div className="xl:hidden absolute top-full left-0 w-full bg-black/95 border-b border-white/10 backdrop-blur-xl p-6 flex flex-col gap-3 shadow-2xl animate-in slide-in-from-top-5">
                 <Link href="#about" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                    <Button variant="ghost" className="w-full justify-start text-lg h-12">About</Button>
+                    <Button variant="ghost" className="w-full justify-start text-base h-10">About</Button>
+                </Link>
+                <Link href="#team" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                    <Button variant="ghost" className="w-full justify-start text-base h-10">Team</Button>
                 </Link>
                 <Link href="#roadmap" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                    <Button variant="ghost" className="w-full justify-start text-lg h-12 text-emerald-400"><Map className="w-4 h-4 mr-2"/> Roadmap</Button>
+                     <Button variant="ghost" className="w-full justify-start text-base h-10 text-emerald-400"><Map className="w-4 h-4 mr-2"/> Roadmap</Button>
                 </Link>
                 <Link href="#research" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                    <Button variant="ghost" className="w-full justify-start text-lg h-12">Research</Button>
+                    <Button variant="ghost" className="w-full justify-start text-base h-10">Research</Button>
                 </Link>
-                <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                    <Button className="w-full bg-emerald-600 text-white h-12">Get in Touch</Button>
+                 <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                    <Button className="w-full bg-emerald-600 text-white h-10">Get in Touch</Button>
                 </Link>
                 
                 <div className="flex justify-center gap-4 pt-4 border-t border-white/10">
-                    <SocialButtons />
+                  <SocialButtons />
                 </div>
             </div>
         )}
