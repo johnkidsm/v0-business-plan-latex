@@ -552,11 +552,11 @@ export default function HomePage() {
           bio: "Min specializes in ML systems, PyTorch, GNNs, and real-time inference, driving the development of our core predictive analytics capabilities.",
         },
         {
-          name: "Husnain Ali",
-          role: "Cofounder & CTO",
-          image: "images/husnain.png",
-          linkedin: "https://www.linkedin.com/in/husnain-ali-ai/",
-          bio: "Husnain steers technical strategy and cross-functional teams with expertise in Agentic AI, full-stack architecture, and automation.",
+          name: "Yonghao Mai (Michael)",
+          role: "Cofounder & AI Engineer",
+          image: "images/michael_mai.PNG",
+          linkedin: "https://www.linkedin.com/in/michael-yong-hao-mai-78702234/",
+          bio: "Michael has expertise in ML, full-stack architecture, and automation to build highimpact, market-ready platforms.",
         },
       ].map((member, index) => (
         <a 
