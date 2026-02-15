@@ -533,7 +533,7 @@ export default function HomePage() {
         {
           name: "Yu Nong (John)",
           role: "Founder & CEO",
-          image: "images/nong.gif",
+          image: "images/me.jpg",
           linkedin: "https://www.linkedin.com/in/nongyu/",
           bio: "John blends visionary leadership with expertise in ML, software engineering, and robotics to drive global infrastructure resilience.",
         },
@@ -994,9 +994,7 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
     { src: "/images/partner13.PNG", alt: "NEBIUS", href: "https://nebius.com" },
     { src: "/images/partner14.PNG", alt: "Scaleway", href: "https://www.scaleway.com" },
     { src: "/images/partner15.PNG", alt: "Lambda", href: "https://lambda.ai" },
-    { src: "/images/partner16.PNG", alt: "ExciteLab", href: "https://www.excitelab.co" },
     { src: "/images/partner17.PNG", alt: "FreeEelectron", href: "https://freeelectrons.org" },
-    { src: "/images/partner18.PNG", alt: "CVL", href: "https://cowessessventures.com" },
     { src: "/images/partner19.PNG", alt: "RBC", href: "https://www.rbc.com" },
   ].map((partner, index) => (
     <a 
