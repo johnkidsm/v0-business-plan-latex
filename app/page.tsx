@@ -533,7 +533,7 @@ export default function HomePage() {
         {
           name: "Yu Nong (John)",
           role: "Founder & CEO",
-          image: "images/me.jpg",
+          image: "images/nong.gif",
           linkedin: "https://www.linkedin.com/in/nongyu/",
           bio: "John blends visionary leadership with expertise in ML, software engineering, and robotics to drive global infrastructure resilience.",
         },
@@ -978,39 +978,43 @@ These visual insights serve as dynamic inputs for our failure analysis, predicti
 
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
             {[
-              { src: "/images/partner1.JPG", alt: "Hydro Québec" },
-              { src: "/images/partner4.JPG", alt: "Alberta Innovates" },
-              { src: "/images/partner5.JPG", alt: "Canadian Natural" },
-              { src: "/images/partner2.JPG", alt: "Altitude Accelerator" },
-              { src: "/images/partner3.png", alt: "AWS" },
-              { src: "/images/partner9.png", alt: "BDC" },
-              { src: "/images/partner8.png", alt: "Enbridge" },
-              { src: "/images/partner6.jpg", alt: "Nvidia" },
-              { src: "/images/partner7.jpg", alt: "CED" },
-              { src: "/images/partner10.JPG", alt: "Google" },
-              { src: "/images/partner11.PNG", alt: "MS" },
-              { src: "/images/partner12.PNG", alt: "YOTTA" },
-              { src: "/images/partner13.PNG", alt: "NEBIUS" },
-              { src: "/images/partner14.PNG", alt: "Scaleway" },
-              { src: "/images/partner15.PNG", alt: "Lambda" },
-              { src: "/images/partner16.PNG", alt: "ExciteLab" },
-              { src: "/images/partner17.PNG", alt: "FreeEelectron" },
-              { src: "/images/partner18.PNG", alt: "CVL" },
-              { src: "/images/partner19.PNG", alt: "RBC" },
-            ].map((partner, index) => (
-              <div 
-                key={index} 
-                className="group bg-white rounded-xl p-4 w-30 h-24 md:w-32 md:h-28 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={partner.src}
-                    alt={partner.alt}
-                    fill
-                    className="object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                  />
-                </div>
-              </div>
+    { src: "/images/partner1.JPG", alt: "Hydro Québec", href: "https://www.hydroquebec.com" },
+    { src: "/images/partner4.JPG", alt: "Alberta Innovates", href: "https://albertainnovates.ca" },
+    { src: "/images/partner5.JPG", alt: "Canadian Natural", href: "https://www.cnrl.com" },
+    { src: "/images/partner2.JPG", alt: "Altitude Accelerator", href: "https://altitudeaccelerator.ca" },
+    { src: "/images/partner3.png", alt: "AWS", href: "https://aws.amazon.com" },
+    { src: "/images/partner20.png", alt: "TC", href: "https://www.tcenergy.com" },
+    { src: "/images/partner9.png", alt: "BDC", href: "https://www.bdc.ca" },
+    { src: "/images/partner8.png", alt: "Enbridge", href: "https://www.enbridge.com" },
+    { src: "/images/partner6.jpg", alt: "Nvidia", href: "https://www.nvidia.com" },
+    { src: "/images/partner7.jpg", alt: "CED", href: "https://ced.canada.ca" },
+    { src: "/images/partner10.JPG", alt: "Google", href: "https://www.google.com" },
+    { src: "/images/partner11.PNG", alt: "MS", href: "https://www.microsoft.com" },
+    { src: "/images/partner12.PNG", alt: "YOTTA", href: "https://www.yotta.com" },
+    { src: "/images/partner13.PNG", alt: "NEBIUS", href: "https://nebius.com" },
+    { src: "/images/partner14.PNG", alt: "Scaleway", href: "https://www.scaleway.com" },
+    { src: "/images/partner15.PNG", alt: "Lambda", href: "https://lambda.ai" },
+    { src: "/images/partner16.PNG", alt: "ExciteLab", href: "https://www.excitelab.co" },
+    { src: "/images/partner17.PNG", alt: "FreeEelectron", href: "https://freeelectrons.org" },
+    { src: "/images/partner18.PNG", alt: "CVL", href: "https://cowessessventures.com" },
+    { src: "/images/partner19.PNG", alt: "RBC", href: "https://www.rbc.com" },
+  ].map((partner, index) => (
+    <a 
+    key={index} 
+    href={partner.href}
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="group bg-white rounded-xl p-4 w-30 h-24 md:w-32 md:h-28 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+  >
+    <div className="relative w-full h-full">
+      <Image
+        src={partner.src}
+        alt={partner.alt}
+        fill
+        className="object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+      />
+    </div>
+  </a>
             ))}
           </div>
         </div>
